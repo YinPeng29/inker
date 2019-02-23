@@ -1,0 +1,80 @@
+<div class="modal fade" id="bannerInfo-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="bannerInfo-add-modal-title">新增首页轮播</h3>
+            </div>
+            <div class="modal-body">
+                <form id="bannerInfo-add-form">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                 <span class="input-group-addon">
+					               	图片：
+					            </span>
+                                <!--<div class="form-group">-->
+                                    <input type="file" id="picturefile" onchange="showPreview(this)" name="picturefile" class="form-control">
+                                    <img id="selectPictureFile" src=""  width="50" height="50">
+                                        <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                 <span class="input-group-addon">
+					               	描述：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="title" id="title" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                  <span class="input-group-addon">
+					               	播放序号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="number" id="banner_index" name="banner_index"  class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	跳转地址：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" id="to_url" name="to_url" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                 <span class="input-group-addon">
+					               	状态：
+					            </span>
+                                <div class="form-group">
+                                    <input type="number" id="status" name="status" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="bannerInfo-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/inker/banner/bannerInfoAdd.js}"></script>

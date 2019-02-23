@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cc.mrbird.inker.dao.CategoryMapper">
+    <resultMap id="BaseResultMap" type="cc.mrbird.inker.domain.Category">
+        <result column="id" jdbcType="VARCHAR" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="creator" jdbcType="VARCHAR" property="creator" />
+        <result column="create_date" jdbcType="DATE" property="create_date" />
+        <result column="modifier" jdbcType="VARCHAR" property="modifier" />
+        <result column="parent_id" jdbcType="VARCHAR" property="parent_id" />
+        <result column="modify_date" jdbcType="DATE" property="modify_date" />
+    </resultMap>
+
+    <update id="updateCategoryNotNull"  parameterType="cc.mrbird.inker.domain.Category">
+        UPDATE category
+        <trim prefix="set" suffixOverrides=",">
+            <if test="name!=null">name=#{name},</if>
+            <if test="modifier!=null">modifier=#{modifier},</if>
+            <if test="modify_date!=null">modify_date=#{modify_date},</if>
+        </trim>
+        WHERE id=#{id}
+    </update>
+</mapper>

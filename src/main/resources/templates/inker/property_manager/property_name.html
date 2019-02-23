@@ -1,0 +1,55 @@
+<div data-th-include="inker/property_manager/property_name_add"></div>
+<div class="card">
+    <div class="card-block">
+        <div class="table-responsive">
+            <div id="data-table_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_buttons hidden-sm-down actions">
+                    <span class="actions__item zmdi zmdi-search" onclick="search()" title="搜索" />
+                    <span class="actions__item zmdi zmdi-refresh-alt" onclick="refresh()" title="刷新" />
+                    <!--
+                    暂时没有下载功能
+                    <div class="dropdown actions__item">
+                        <i data-toggle="dropdown" class="zmdi zmdi-download">
+                        </i>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0)" class="dropdown-item" data-table-action="excel" onclick="exportRoleExcel()">
+                                Excel (.xlsx)
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item" data-table-action="csv" onclick="exportRoleCsv()">
+                                CSV (.csv)
+                            </a>
+                        </ul>
+                    </div>
+                    -->
+                    <div class="dropdown actions__item">
+                        <i data-toggle="dropdown" class="zmdi zmdi-more-vert"></i>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0)" class="dropdown-item" data-toggle="modal" data-target="#property-name-add" onclick="addPropertyName()">新增属性名称</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="updatePropertyName()" >修改属性名称</a>
+                            <!--<a href="javascript:void(0)" class="dropdown-item" onclick="deletePropertyName()" >删除属性名称</a>-->
+                        </div>
+                    </div>
+                </div>
+                <div id="data-table_filter" class="dataTables_filter">
+                    <form class="property-name-table-form">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	属性名称：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="propertyName" class="form-control">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <table id="propertyNameTable" data-mobile-responsive="true" class="mb-bootstrap-table text-nowrap"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/inker/property/property.js}"></script>

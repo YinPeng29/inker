@@ -1,0 +1,64 @@
+<style>
+    label {
+        display: inline-block;
+        margin-bottom: .5rem;
+        padding: 5px;
+    }
+    input[type='checkbox'] {
+        margin-right: 1px;
+        vertical-align:middle;
+    }
+</style>
+
+<div class="modal fade" id="property-name-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="property-name-add-modal-title">新增属性</h3>
+            </div>
+            <div class="modal-body">
+                <form id="property-name-add-form">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	属性名称：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="id" hidden class="form-control" id="property_name_id">
+                                    <input type="text" name="name" class="form-control" id="property_name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="row">-->
+                        <!--<div class="col-sm-11">-->
+                            <!--<div class="input-group">-->
+                                <!--<span class="input-group-addon" style="justify-content: flex-start;margin-top: .5rem;">-->
+					               	<!--属性值：-->
+					             <!--</span>-->
+                                <!--<div class="form-group">-->
+                                    <!--<div id="checkDiv">-->
+                                        <!--&lt;!&ndash;<label class='checkbox-inline'>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<input type='checkbox' name='checkbox_property_value' value='30f3cbb5dbdb45188c4a4c8fd980f9b8checked' checked />针织21&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<label class='checkbox-inline'>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<input type='checkbox' name='checkbox_property_value' value='64cf5e14132e4ecd8591130c0269e107' />绿色&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<input type="hidden" name="property_value_id">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="property-name-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/inker/property/propertyNameAdd.js}"></script>
